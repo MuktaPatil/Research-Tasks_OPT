@@ -1,0 +1,120 @@
+
+==============================================================================
+CROSS-DATASET COMPARISON
+==============================================================================
+
+Columns shared by ALL THREE datasets: 27
+  - advocacy_msg_type_illuminating
+  - attack_msg_type_illuminating
+  - covid_topic_illuminating
+  - cta_msg_type_illuminating
+  - economy_topic_illuminating
+  - education_topic_illuminating
+  - engagement_cta_subtype_illuminating
+  - environment_topic_illuminating
+  - foreign_policy_topic_illuminating
+  - fraud_illuminating
+  - freefair_illuminating
+  - fundraising_cta_subtype_illuminating
+  - governance_topic_illuminating
+  - health_topic_illuminating
+  - image_msg_type_illuminating
+  - immigration_topic_illuminating
+  - incivility_illuminating
+  - issue_msg_type_illuminating
+  - lgbtq_issues_topic_illuminating
+  - military_topic_illuminating
+  - race_and_ethnicity_topic_illuminating
+  - safety_topic_illuminating
+  - scam_illuminating
+  - social_and_cultural_topic_illuminating
+  - technology_and_privacy_topic_illuminating
+  - voting_cta_subtype_illuminating
+  - womens_issue_topic_illuminating
+
+Columns unique to ads (12):
+  - ad_creation_time
+  - ad_id
+  - bylines
+  - currency
+  - delivery_by_region
+  - demographic_distribution
+  - estimated_audience_size
+  - estimated_impressions
+  - estimated_spend
+  - illuminating_mentions
+  - page_id
+  - publisher_platforms
+
+Columns unique to fb_posts (29):
+  - Angry
+  - Care
+  - Comments
+  - Facebook_Id
+  - Haha
+  - Is Video Owner?
+  - Likes
+  - Love
+  - Overperforming Score
+  - Page Admin Top Country
+  - Page Category
+  - Post Created
+  - Post Created Date
+  - Post Created Time
+  - Post Views
+  ... and 14 more
+
+Columns unique to tw_posts (18):
+  - bookmarkCount
+  - createdAt
+  - id
+  - inReplyToId
+  - isConversationControlled
+  - isQuote
+  - isReply
+  - isRetweet
+  - lang
+  - likeCount
+  - month_year
+  - quoteCount
+  - quoteId
+  - replyCount
+  - retweetCount
+  ... and 3 more
+
+------------------------------------------------------------------------------
+RATE OF EACH SHARED FLAG BEING SET, PER DATASET (0.0-1.0)
+Sorted by spread (max - min across the three platforms)
+------------------------------------------------------------------------------
+                                             ads  fb_posts  tw_posts  spread
+cta_msg_type_illuminating                  0.573     0.133     0.110   0.463
+fundraising_cta_subtype_illuminating       0.228     0.018     0.008   0.221
+voting_cta_subtype_illuminating            0.144     0.023     0.017   0.127
+issue_msg_type_illuminating                0.382     0.460     0.508   0.126
+attack_msg_type_illuminating               0.272     0.217     0.308   0.091
+image_msg_type_illuminating                0.223     0.149     0.226   0.078
+economy_topic_illuminating                 0.122     0.090     0.160   0.070
+health_topic_illuminating                  0.109     0.049     0.056   0.061
+incivility_illuminating                    0.188     0.128     0.179   0.060
+scam_illuminating                          0.072     0.020     0.012   0.059
+engagement_cta_subtype_illuminating        0.125     0.091     0.067   0.058
+womens_issue_topic_illuminating            0.081     0.025     0.023   0.058
+social_and_cultural_topic_illuminating     0.106     0.062     0.052   0.054
+covid_topic_illuminating                   0.025     0.052     0.008   0.045
+foreign_policy_topic_illuminating          0.005     0.037     0.042   0.037
+immigration_topic_illuminating             0.034     0.041     0.065   0.032
+advocacy_msg_type_illuminating             0.549     0.549     0.564   0.015
+race_and_ethnicity_topic_illuminating      0.012     0.022     0.015   0.009
+military_topic_illuminating                0.002     0.006     0.011   0.009
+governance_topic_illuminating              0.026     0.031     0.023   0.008
+environment_topic_illuminating             0.021     0.022     0.029   0.007
+fraud_illuminating                         0.003     0.009     0.003   0.006
+safety_topic_illuminating                  0.034     0.032     0.038   0.005
+freefair_illuminating                      0.006     0.003     0.001   0.005
+education_topic_illuminating               0.014     0.015     0.018   0.004
+technology_and_privacy_topic_illuminating  0.001     0.002     0.002   0.001
+lgbtq_issues_topic_illuminating            0.003     0.003     0.003   0.000
+
+==============================================================================
+END OF REPORT
+==============================================================================

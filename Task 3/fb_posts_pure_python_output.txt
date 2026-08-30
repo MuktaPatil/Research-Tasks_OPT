@@ -1,0 +1,637 @@
+==============================================================================
+PURE PYTHON DESCRIPTIVE STATISTICS + GROUPED ANALYSIS
+Dataset: 2024_fb_posts_president_scored_anon.csv
+==============================================================================
+
+Sampling first 5,000 rows to infer schema...
+Detected grouping key set(s): [('Facebook_Id',), ('Facebook_Id', 'post_id')]
+Detected grouping metric column(s): ['Total Interactions', 'Likes', 'Comments']
+
+Running full pass over the file...
+
+Total rows:    19,009
+Total columns: 56
+
+------------------------------------------------------------------------------
+MISSING VALUES PER COLUMN
+------------------------------------------------------------------------------
+  Facebook_Id                                          0 missing (  0.0%)
+  post_id                                              0 missing (  0.0%)
+  Page Category                                    2,472 missing ( 13.0%)
+  Page Admin Top Country                           2,729 missing ( 14.4%)
+  Post Created                                         0 missing (  0.0%)
+  Post Created Date                                    0 missing (  0.0%)
+  Post Created Time                                    0 missing (  0.0%)
+  Type                                             2,465 missing ( 13.0%)
+  Total Interactions                                   0 missing (  0.0%)
+  Likes                                                0 missing (  0.0%)
+  Comments                                             0 missing (  0.0%)
+  Shares                                               0 missing (  0.0%)
+  Love                                                 0 missing (  0.0%)
+  Wow                                                  0 missing (  0.0%)
+  Haha                                                 0 missing (  0.0%)
+  Sad                                                  0 missing (  0.0%)
+  Angry                                                0 missing (  0.0%)
+  Care                                                 0 missing (  0.0%)
+  Video Share Status                              15,738 missing ( 82.8%)
+  Is Video Owner?                                 15,745 missing ( 82.8%)
+  Post Views                                       2,465 missing ( 13.0%)
+  Total Views                                      2,465 missing ( 13.0%)
+  Total Views For All Crossposts                   2,465 missing ( 13.0%)
+  Video Length                                    15,738 missing ( 82.8%)
+  Sponsor Id                                      19,009 missing (100.0%)
+  Sponsor Name                                    19,009 missing (100.0%)
+  Sponsor Category                                19,009 missing (100.0%)
+  Overperforming Score                             2,465 missing ( 13.0%)
+  illuminating_scored_messageelection_integrity_Truth_illuminating   19,009 missing (100.0%)
+  advocacy_msg_type_illuminating                       0 missing (  0.0%)
+  issue_msg_type_illuminating                          0 missing (  0.0%)
+  attack_msg_type_illuminating                         0 missing (  0.0%)
+  image_msg_type_illuminating                          0 missing (  0.0%)
+  cta_msg_type_illuminating                            0 missing (  0.0%)
+  engagement_cta_subtype_illuminating                  0 missing (  0.0%)
+  fundraising_cta_subtype_illuminating                 0 missing (  0.0%)
+  voting_cta_subtype_illuminating                      0 missing (  0.0%)
+  covid_topic_illuminating                             0 missing (  0.0%)
+  economy_topic_illuminating                           0 missing (  0.0%)
+  education_topic_illuminating                         0 missing (  0.0%)
+  environment_topic_illuminating                       0 missing (  0.0%)
+  foreign_policy_topic_illuminating                    0 missing (  0.0%)
+  governance_topic_illuminating                        0 missing (  0.0%)
+  health_topic_illuminating                            0 missing (  0.0%)
+  immigration_topic_illuminating                       0 missing (  0.0%)
+  lgbtq_issues_topic_illuminating                      0 missing (  0.0%)
+  military_topic_illuminating                          0 missing (  0.0%)
+  race_and_ethnicity_topic_illuminating                0 missing (  0.0%)
+  safety_topic_illuminating                            0 missing (  0.0%)
+  social_and_cultural_topic_illuminating               0 missing (  0.0%)
+  technology_and_privacy_topic_illuminating            0 missing (  0.0%)
+  womens_issue_topic_illuminating                      0 missing (  0.0%)
+  incivility_illuminating                              0 missing (  0.0%)
+  scam_illuminating                                  949 missing (  5.0%)
+  freefair_illuminating                                0 missing (  0.0%)
+  fraud_illuminating                                   0 missing (  0.0%)
+
+------------------------------------------------------------------------------
+PER-COLUMN ANALYSIS
+------------------------------------------------------------------------------
+
+[Facebook_Id]
+  Inferred type: categorical   Missing: 0
+  Count:         19,009
+  Unique values: 21
+  Mode:          32fc18da91029ff09bf74fe9887eace6b5d2145809d583f696e344530508b064 (9013)
+  Top values:
+    - 32fc18da91029ff09bf74fe9887eace6b5d2145809d583f696e344530...: 9,013
+    - bfe51c6ac2cab17ba5c85883e76f61398031ed57e4cf62d19fd483548...: 1,431
+    - ac24f31c4d4b3d5555065fa9558bdca4ab4b5e1379922875ae9e6e32f...: 1,231
+    - 7f5731ac8e6959576e781064b5fa76e059200cdfc3f4e0d7b68bc9879...: 1,158
+    - a3fa0d15dd83b910295d0b17f9d341e737eddcb8d9b8081758140584c...: 1,074
+
+[post_id]
+  Inferred type: categorical   Missing: 0
+  Count:         19,009
+  Unique values: 19,009
+  Mode:          8570b69695e00d8f06b12398ed525497e1712b5369c6fc2138fe98f69811c138 (1)
+  Top values:
+    - 8570b69695e00d8f06b12398ed525497e1712b5369c6fc2138fe98f69...: 1
+    - 41ec27cecd8af40007a9faf8c3e5c9225bcff0b8d58856563bbc9d59d...: 1
+    - 1dcb5e00cd1c8d7ee141922f50f29e59e96328231b6937870e87029c9...: 1
+    - 3e5e0a047865ab02fe0f49c343963239fe7774b63e8ab6001b6ec18f4...: 1
+    - b83adc0e8ac0aedd39f55b72d723729e114a83d41fd48b1b13c7ec782...: 1
+
+[Page Category]
+  Inferred type: categorical   Missing: 2,472
+  Count:         16,537
+  Unique values: 6
+  Mode:          PERSON (9453)
+  Top values:
+    - PERSON: 9,453
+    - ACTOR: 3,304
+    - POLITICIAN: 2,595
+    - POLITICAL_CANDIDATE: 1,161
+    - ENTREPRENEUR: 23
+
+[Page Admin Top Country]
+  Inferred type: categorical   Missing: 2,729
+  Count:         16,280
+  Unique values: 1
+  Mode:          US (16280)
+  Top values:
+    - US: 16,280
+
+[Post Created]
+  Inferred type: categorical   Missing: 0
+  Count:         19,009
+  Unique values: 18,951
+  Mode:          2023-11-14 11:11:44 EST (2)
+  Top values:
+    - 2023-11-14 11:11:44 EST: 2
+    - 2023-11-22 19:20:24 EST: 2
+    - 2023-12-22 11:22:14 EST: 2
+    - 2024-01-06 18:47:00 EST: 2
+    - 2024-01-30 12:28:10 EST: 2
+
+[Post Created Date]
+  Inferred type: categorical   Missing: 0
+  Count:         19,009
+  Unique values: 425
+  Mode:          2024-10-31 (103)
+  Top values:
+    - 2024-10-31: 103
+    - 2024-01-10: 102
+    - 2024-01-15: 96
+    - 2024-01-06: 95
+    - 2024-10-30: 94
+
+[Post Created Time]
+  Inferred type: categorical   Missing: 0
+  Count:         19,009
+  Unique values: 16,102
+  Mode:          19:42:00 (7)
+  Top values:
+    - 19:42:00: 7
+    - 17:30:01: 7
+    - 19:30:01: 6
+    - 15:40:00: 6
+    - 12:00:16: 6
+
+[Type]
+  Inferred type: categorical   Missing: 2,465
+  Count:         16,544
+  Unique values: 9
+  Mode:          Link (7404)
+  Top values:
+    - Link: 7,404
+    - Photo: 3,820
+    - Native Video: 2,931
+    - Status: 1,387
+    - YouTube: 353
+
+[Total Interactions]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   4,190.44
+  Min:    0.00
+  Max:    696,853.00
+  Stdev:  19,003.08
+  Median: 283.00
+
+[Likes]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   2,377.70
+  Min:    0.00
+  Max:    351,979.00
+  Stdev:  11,253.47
+  Median: 139.00
+
+[Comments]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   901.58
+  Min:    0.00
+  Max:    93,872.00
+  Stdev:  3,681.98
+  Median: 48.00
+
+[Shares]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   320.54
+  Min:    0.00
+  Max:    76,150.00
+  Stdev:  1,722.16
+  Median: 21.00
+
+[Love]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   413.88
+  Min:    0.00
+  Max:    244,482.00
+  Stdev:  3,730.94
+  Median: 4.00
+
+[Wow]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   5.87
+  Min:    0.00
+  Max:    4,345.00
+  Stdev:  52.95
+  Median: 1.00
+
+[Haha]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   105.72
+  Min:    0.00
+  Max:    99,276.00
+  Stdev:  942.03
+  Median: 2.00
+
+[Sad]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   10.17
+  Min:    0.00
+  Max:    56,111.00
+  Stdev:  418.33
+  Median: 0.00
+
+[Angry]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   20.06
+  Min:    0.00
+  Max:    11,814.00
+  Stdev:  156.02
+  Median: 1.00
+
+[Care]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   34.93
+  Min:    0.00
+  Max:    85,236.00
+  Stdev:  790.10
+  Median: 0.00
+
+[Video Share Status]
+  Inferred type: categorical   Missing: 15,738
+  Count:         3,271
+  Unique values: 3
+  Mode:          owned (3100)
+  Top values:
+    - owned: 3,100
+    - share: 99
+    - crosspost: 72
+
+[Is Video Owner?]
+  Inferred type: categorical   Missing: 15,745
+  Count:         3,264
+  Unique values: 2
+  Mode:          Yes (3181)
+  Top values:
+    - Yes: 3,181
+    - No: 83
+
+[Post Views]
+  Inferred type: numeric   Missing: 2,465
+  Count:  16,544
+  Mean:   6,485.06
+  Min:    0.00
+  Max:    4,276,477.00
+  Stdev:  90,392.96
+  Median: 0.00
+
+[Total Views]
+  Inferred type: numeric   Missing: 2,465
+  Count:  16,544
+  Mean:   7,461.85
+  Min:    0.00
+  Max:    4,462,155.00
+  Stdev:  95,976.28
+  Median: 0.00
+
+[Total Views For All Crossposts]
+  Inferred type: numeric   Missing: 2,465
+  Count:  16,544
+  Mean:   3,555.94
+  Min:    0.00
+  Max:    4,499,458.00
+  Stdev:  88,094.05
+  Median: 0.00
+
+[Video Length]
+  Inferred type: categorical   Missing: 15,738
+  Count:         3,271
+  Unique values: 774
+  Mode:          00:00:30 (83)
+  Top values:
+    - 00:00:30: 83
+    - 00:01:00: 50
+    - 00:00:59: 37
+    - 00:00:37: 33
+    - 00:00:45: 32
+
+[Sponsor Id]
+  Inferred type: empty   Missing: 19,009
+  Count:         0
+  Unique values: 0
+  Mode:          None (N/A)
+  Top values:
+
+[Sponsor Name]
+  Inferred type: empty   Missing: 19,009
+  Count:         0
+  Unique values: 0
+  Mode:          None (N/A)
+  Top values:
+
+[Sponsor Category]
+  Inferred type: empty   Missing: 19,009
+  Count:         0
+  Unique values: 0
+  Mode:          None (N/A)
+  Top values:
+
+[Overperforming Score]
+  Inferred type: numeric   Missing: 2,465
+  Count:  16,544
+  Mean:   -2.74
+  Min:    -198.75
+  Max:    246.78
+  Stdev:  7.81
+  Median: -1.62
+
+[illuminating_scored_messageelection_integrity_Truth_illuminating]
+  Inferred type: empty   Missing: 19,009
+  Count:         0
+  Unique values: 0
+  Mode:          None (N/A)
+  Top values:
+
+[advocacy_msg_type_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.55
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.50
+  Median: 1.00
+
+[issue_msg_type_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.46
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.50
+  Median: 0.00
+
+[attack_msg_type_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.22
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.41
+  Median: 0.00
+
+[image_msg_type_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.15
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.36
+  Median: 0.00
+
+[cta_msg_type_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.13
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.34
+  Median: 0.00
+
+[engagement_cta_subtype_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.09
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.29
+  Median: 0.00
+
+[fundraising_cta_subtype_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.13
+  Median: 0.00
+
+[voting_cta_subtype_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.15
+  Median: 0.00
+
+[covid_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.05
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.22
+  Median: 0.00
+
+[economy_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.09
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.29
+  Median: 0.00
+
+[education_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.12
+  Median: 0.00
+
+[environment_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.15
+  Median: 0.00
+
+[foreign_policy_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.04
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.19
+  Median: 0.00
+
+[governance_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.03
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.17
+  Median: 0.00
+
+[health_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.05
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.22
+  Median: 0.00
+
+[immigration_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.04
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.20
+  Median: 0.00
+
+[lgbtq_issues_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.06
+  Median: 0.00
+
+[military_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.07
+  Median: 0.00
+
+[race_and_ethnicity_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.15
+  Median: 0.00
+
+[safety_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.03
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.18
+  Median: 0.00
+
+[social_and_cultural_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.06
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.24
+  Median: 0.00
+
+[technology_and_privacy_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.05
+  Median: 0.00
+
+[womens_issue_topic_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.03
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.16
+  Median: 0.00
+
+[incivility_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.13
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.33
+  Median: 0.00
+
+[scam_illuminating]
+  Inferred type: numeric   Missing: 949
+  Count:  18,060
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.14
+  Median: 0.00
+
+[freefair_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.05
+  Median: 0.00
+
+[fraud_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  19,009
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.09
+  Median: 0.00
+
+==============================================================================
+GROUPED ANALYSIS
+==============================================================================
+
+Grouped by ('Facebook_Id',): 21 groups
+Top 10 groups by Total Interactions_sum:
+
+Facebook_Id | row_count | Total Interactions_sum | Likes_sum | Comments_sum
+----------------------------------------------------------------------------------------------------
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | 616 | 41,878,650.00 | 24,267,226.00 | 8,574,994.00
+d6008f090fcb5df7263efe969d3fc268e0ec1f6d75c8ff692b2eeacc9c48b309 | 929 | 11,009,368.00 | 4,725,536.00 | 3,448,408.00
+ac24f31c4d4b3d5555065fa9558bdca4ab4b5e1379922875ae9e6e32f1d46d25 | 1,231 | 10,126,556.00 | 6,207,838.00 | 2,268,702.00
+a3fa0d15dd83b910295d0b17f9d341e737eddcb8d9b8081758140584c710406e | 1,074 | 3,614,229.00 | 2,724,349.00 | 402,720.00
+fedbfaab19b5112a6889b862314ca9d3a626b22df7f959db3d9b1c4c54e69948 | 643 | 3,392,013.00 | 2,087,526.00 | 416,583.00
+32fc18da91029ff09bf74fe9887eace6b5d2145809d583f696e344530508b064 | 9,013 | 2,836,628.00 | 1,553,812.00 | 357,600.00
+8e8dac0ee6f22255b9d9365845a7fb830627cc27d34934c4f097689ec8da6719 | 269 | 2,212,499.00 | 1,463,720.00 | 266,200.00
+7f5731ac8e6959576e781064b5fa76e059200cdfc3f4e0d7b68bc98792d2cf5b | 1,158 | 2,028,172.00 | 923,786.00 | 704,934.00
+bfe51c6ac2cab17ba5c85883e76f61398031ed57e4cf62d19fd483548ebb904b | 1,431 | 706,722.00 | 375,527.00 | 116,204.00
+b1daf9f2909abed80b7e02520dfd0bfdc22128e3b92c2aba8cb3b44a6bc42cbe | 336 | 521,725.00 | 194,490.00 | 207,192.00
+
+Grouped by ('Facebook_Id', 'post_id'): 19,009 groups
+Top 10 groups by Total Interactions_sum:
+
+Facebook_Id | post_id | row_count | Total Interactions_sum | Likes_sum | Comments_sum
+----------------------------------------------------------------------------------------------------
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | 242856fb8e359799e1c63283f77342292f963f5abb64a058f310155b583263c2 | 1 | 696,853.00 | 315,973.00 | 64,474.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | b3a3911160a6b8ed842df94593b6fdd8d3143a2b5ae007e32c76f40b86083497 | 1 | 470,087.00 | 351,979.00 | 69,026.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | f8c1ff50c7c4bb73d09fc9cdc77b1c9ae083068f53d2b09a6e61998f304c22d1 | 1 | 457,320.00 | 197,632.00 | 93,872.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | dfc2669babf83a5c8e6230c8dab662fe25cd3dbf2c18b93bd3b47381153edc32 | 1 | 432,928.00 | 257,927.00 | 53,454.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | 317f626dae1583eb59daa6975a2f2684fbb9b56ec423125d7b2a886102465bd8 | 1 | 429,583.00 | 250,120.00 | 67,361.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | 8d2460a6db7b16f5d9abdafbb64865cf62f4de684ad7754d9511955a4e9df2db | 1 | 360,659.00 | 199,316.00 | 39,937.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | d352c5bca0c9f70afbc99d795c5f872f015a5566c49cb8369b755f5ff0fe12c0 | 1 | 360,072.00 | 157,199.00 | 77,304.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | 13369fa27b142fa2a08ef480e01dff19454036cc2446db96d22d152cffe798ef | 1 | 357,151.00 | 248,510.00 | 86,110.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | d27c5187db05d18f3f0b9f8f4b6df2ecc19d9cdd4622be9f2089cde2aeb813dc | 1 | 354,234.00 | 158,123.00 | 77,016.00
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a | fe868cae8a5a4b120a080d7e39a30c7fc0a6443ae4197ed6796c0cca4925ff29 | 1 | 346,936.00 | 185,735.00 | 39,011.00
+
+==============================================================================
+END OF REPORT
+==============================================================================

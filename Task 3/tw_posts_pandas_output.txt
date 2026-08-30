@@ -1,0 +1,240 @@
+==============================================================================
+PANDAS DESCRIPTIVE STATISTICS + GROUPED ANALYSIS
+Dataset: 2024_tw_posts_president_scored_anon.csv
+==============================================================================
+
+Loading and inferring schema...
+Detected grouping key set(s): [['source'], ['id']]
+Detected grouping metric column(s): ['retweetCount', 'replyCount', 'likeCount']
+
+------------------------------------------------------------------------------
+BASIC STRUCTURE
+------------------------------------------------------------------------------
+Shape: 27,304 rows x 47 columns
+
+------------------------------------------------------------------------------
+MISSING VALUES PER COLUMN
+------------------------------------------------------------------------------
+                                           missing_count  ...  inferred_type
+id                                                     0  ...    categorical
+url                                                    0  ...    categorical
+source                                                 0  ...    categorical
+retweetCount                                           0  ...        numeric
+replyCount                                             0  ...        numeric
+likeCount                                              0  ...        numeric
+quoteCount                                             0  ...        numeric
+viewCount                                              0  ...        numeric
+createdAt                                              0  ...    categorical
+lang                                                   0  ...    categorical
+bookmarkCount                                          0  ...        numeric
+isReply                                                0  ...        boolean
+isRetweet                                              0  ...        boolean
+isQuote                                                0  ...        boolean
+isConversationControlled                               0  ...        boolean
+quoteId                                            24017  ...        numeric
+inReplyToId                                        23959  ...        numeric
+month_year                                             0  ...    categorical
+illuminating_scored_message                            0  ...    categorical
+election_integrity_Truth_illuminating               1270  ...        numeric
+advocacy_msg_type_illuminating                      1270  ...        numeric
+issue_msg_type_illuminating                         1270  ...        numeric
+attack_msg_type_illuminating                        1270  ...        numeric
+image_msg_type_illuminating                         1270  ...        numeric
+cta_msg_type_illuminating                           1270  ...        numeric
+engagement_cta_subtype_illuminating                 1270  ...        numeric
+fundraising_cta_subtype_illuminating                1270  ...        numeric
+voting_cta_subtype_illuminating                     1270  ...        numeric
+covid_topic_illuminating                            1270  ...        numeric
+economy_topic_illuminating                          1270  ...        numeric
+education_topic_illuminating                        1270  ...        numeric
+environment_topic_illuminating                      1270  ...        numeric
+foreign_policy_topic_illuminating                   1270  ...        numeric
+governance_topic_illuminating                       1270  ...        numeric
+health_topic_illuminating                           1270  ...        numeric
+immigration_topic_illuminating                      1270  ...        numeric
+lgbtq_issues_topic_illuminating                     1270  ...        numeric
+military_topic_illuminating                         1270  ...        numeric
+race_and_ethnicity_topic_illuminating               1270  ...        numeric
+safety_topic_illuminating                           1270  ...        numeric
+social_and_cultural_topic_illuminating              1270  ...        numeric
+technology_and_privacy_topic_illuminating           1270  ...        numeric
+womens_issue_topic_illuminating                     1270  ...        numeric
+incivility_illuminating                             1270  ...        numeric
+scam_illuminating                                   1270  ...        numeric
+freefair_illuminating                                  0  ...        numeric
+fraud_illuminating                                     0  ...        numeric
+
+[47 rows x 3 columns]
+
+------------------------------------------------------------------------------
+DESCRIBE() -- NUMERIC COLUMNS (36)
+------------------------------------------------------------------------------
+                                             count          mean           std           min           25%           50%           75%           max
+retweetCount                               27304.0  1.322055e+03  3.405004e+03  0.000000e+00  8.400000e+01  3.330000e+02  1.071000e+03  1.446150e+05
+replyCount                                 27304.0  1.063785e+03  3.174982e+03  0.000000e+00  4.300000e+01  1.310000e+02  5.012500e+02  1.212700e+05
+likeCount                                  27304.0  6.913693e+03  2.159031e+04  0.000000e+00  3.930000e+02  1.406000e+03  5.010000e+03  9.152210e+05
+quoteCount                                 27304.0  1.280816e+02  1.131533e+03  0.000000e+00  5.000000e+00  1.700000e+01  6.900000e+01  1.233200e+05
+viewCount                                  27304.0  5.070847e+05  3.212174e+06  5.000000e+00  2.785275e+04  7.094200e+04  3.036630e+05  3.335028e+08
+bookmarkCount                              27304.0  1.362135e+02  7.125803e+02  0.000000e+00  4.000000e+00  2.100000e+01  7.600000e+01  4.269300e+04
+quoteId                                     3287.0  1.764298e+18  6.894687e+16  7.912639e+17  1.726459e+18  1.756496e+18  1.816599e+18  1.853576e+18
+inReplyToId                                 3345.0  1.758286e+18  4.361197e+16  1.240067e+18  1.726801e+18  1.746641e+18  1.789226e+18  1.853531e+18
+election_integrity_Truth_illuminating      26034.0  3.714374e-02  1.891176e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+advocacy_msg_type_illuminating             26034.0  5.636859e-01  4.959370e-01  0.000000e+00  0.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00
+issue_msg_type_illuminating                26034.0  5.076823e-01  4.999506e-01  0.000000e+00  0.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00
+attack_msg_type_illuminating               26034.0  3.075978e-01  4.615079e-01  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00  1.000000e+00
+image_msg_type_illuminating                26034.0  2.264347e-01  4.185316e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+cta_msg_type_illuminating                  26034.0  1.096643e-01  3.124768e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+engagement_cta_subtype_illuminating        26034.0  6.691250e-02  2.498752e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+fundraising_cta_subtype_illuminating       26034.0  7.874318e-03  8.838899e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+voting_cta_subtype_illuminating            26034.0  1.678574e-02  1.284703e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+covid_topic_illuminating                   26034.0  7.605439e-03  8.687857e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+economy_topic_illuminating                 26034.0  1.602136e-01  3.668111e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+education_topic_illuminating               26034.0  1.843743e-02  1.345295e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+environment_topic_illuminating             26034.0  2.853960e-02  1.665117e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+foreign_policy_topic_illuminating          26034.0  4.225244e-02  2.011684e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+governance_topic_illuminating              26034.0  2.296996e-02  1.498106e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+health_topic_illuminating                  26034.0  5.565799e-02  2.292645e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+immigration_topic_illuminating             26034.0  6.529922e-02  2.470578e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+lgbtq_issues_topic_illuminating            26034.0  3.072905e-03  5.534961e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+military_topic_illuminating                26034.0  1.098563e-02  1.042371e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+race_and_ethnicity_topic_illuminating      26034.0  1.540293e-02  1.231514e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+safety_topic_illuminating                  26034.0  3.760467e-02  1.902418e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+social_and_cultural_topic_illuminating     26034.0  5.197050e-02  2.219718e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+technology_and_privacy_topic_illuminating  26034.0  2.035799e-03  4.507475e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+womens_issue_topic_illuminating            26034.0  2.331566e-02  1.509070e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+incivility_illuminating                    26034.0  1.785742e-01  3.830027e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+scam_illuminating                          26034.0  1.236844e-02  1.105257e-01  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+freefair_illuminating                      27304.0  1.428362e-03  3.776737e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+fraud_illuminating                         27304.0  2.746850e-03  5.233933e-02  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  1.000000e+00
+
+------------------------------------------------------------------------------
+BOOLEAN COLUMNS (4)
+------------------------------------------------------------------------------
+[isReply] {False: 23930, True: 3374}  true_rate=0.124
+[isRetweet] {False: 27304}  true_rate=0.000
+[isQuote] {False: 24064, True: 3240}  true_rate=0.119
+[isConversationControlled] {False: 27296, True: 8}  true_rate=0.000
+
+------------------------------------------------------------------------------
+DESCRIBE() -- CATEGORICAL COLUMNS (7)
+------------------------------------------------------------------------------
+                             count unique                                                top   freq
+id                           27304  27304  cc46051622b8a9c1b883a3bbf12c640b12ac1cbdc7f48a...      1
+url                          27304  27304  f70a206472e9deaf6e313297c1efb891729ced346a0aeb...      1
+source                       27304     14                                    Twitter Web App  14930
+createdAt                    27304  27014                                2023-10-06 04:55:21      4
+lang                         27304     12                                                 en  27281
+month_year                   27304     15                                            2024-10   3586
+illuminating_scored_message  27304  27136  36cb7d55fcf85362ca03f624c2f574f1f55f89db559b17...     21
+
+------------------------------------------------------------------------------
+CATEGORICAL COLUMNS: nunique() / top value_counts()
+------------------------------------------------------------------------------
+
+[id]  nunique = 27,304
+id
+cc46051622b8a9c1b883a3bbf12c640b12ac1cbdc7f48a773b6cc2a65f03aa2d    1
+0e3db0c35a290c6df3b737d15882846c108cc80a9b7e5ca64a0129d4e3cd3ad7    1
+256905919085d2946d5d187abc6cbe81a8abe3384793b362fa6aa4144bf42776    1
+a461b32b31e72b222df7fdda0a8e68b0092e31deda33a8652eb443459546a4c4    1
+ca2795ec79d62adc1fff06c4d3bc9da0bbc899e32c9b218798ac62a0ceae19dc    1
+
+[url]  nunique = 27,304
+url
+f70a206472e9deaf6e313297c1efb891729ced346a0aeb34e16935d78f74b937    1
+a1962f54943732a0dc006c33b4b6f5764c7085a1282a59439b891ee0eb59a0dc    1
+4ddbbdb7f4d8ef62fccf3ed20c993bb665b8620fedb089e81b43c0c7bc0c613e    1
+c7e729c427e714baf06d88a2856a1be07d4ff52e1e633412ce15b0160e8f6c38    1
+c589bd751d7e1d275901b184087716d3155a582b16430810211e1344d3ad2785    1
+
+[source]  nunique = 14
+source
+Twitter Web App         14930
+Twitter for iPhone       8494
+Sprout Social            2933
+Twitter Media Studio      499
+Twitter for iPad          266
+
+[createdAt]  nunique = 27,014
+createdAt
+2023-10-06 04:55:21    4
+2024-05-28 17:19:24    4
+2024-08-30 03:04:08    4
+2023-09-08 16:19:09    3
+2023-09-08 16:19:04    3
+
+[lang]  nunique = 12
+lang
+en    27281
+fr        6
+tl        4
+es        3
+da        3
+
+[month_year]  nunique = 15
+month_year
+2024-10    3586
+2024-09    2856
+2024-08    2647
+2023-09    2336
+2023-11    2334
+
+[illuminating_scored_message]  nunique = 27,136
+illuminating_scored_message
+36cb7d55fcf85362ca03f624c2f574f1f55f89db559b17da084df6e643afe5cd    21
+1d2cc25fad0d66a295d4fafdd590d71d0e027a1d2a58cf5db0c58ba09b930e04    18
+e85b31153cfcc753f8657eb033c8e8fb03f6da4c384da1d4e563eef696f6e7a0    10
+c3adbeed65888d91e375c51dc9cc936d137e35fc360ebed1763b5826903046f9     7
+de3c2805b2cea354c20c7fe117fc9c1885c9aea23ca9d1623d93d7c56df7a9bb     4
+
+------------------------------------------------------------------------------
+LIST-VALUED COLUMNS (0) -- exploded item frequency
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+DICT / NESTED-STRUCTURE COLUMNS (0)
+------------------------------------------------------------------------------
+
+==============================================================================
+GROUPED ANALYSIS
+==============================================================================
+
+------------------------------------------------------------------------------
+GROUPED BY ['source']
+------------------------------------------------------------------------------
+Number of groups: 14
+
+Top 10 groups by retweetCount_sum:
+                 source  row_count  retweetCount_sum  retweetCount_mean  replyCount_sum  replyCount_mean  likeCount_sum  likeCount_mean
+        Twitter Web App      14930          19664442        1317.109310        10737719       719.204220       99579349     6669.748761
+          Sprout Social       2933          10338219        3524.793386        15211336      5186.272076       53302601    18173.406410
+     Twitter for iPhone       8494           5203628         612.623970         2461493       289.791971       31784204     3741.959501
+   Twitter Media Studio        499            791520        1586.212425          579985      1162.294589        3691549     7397.893788
+              Periscope        103             61463         596.728155           41412       402.058252         255786     2483.359223
+       Twitter for iPad        266             17390          65.375940            5666        21.300752          59237      222.695489
+      TweetDeck Web App          7             13378        1911.142857            4615       659.285714          72523    10360.428571
+         Hootsuite Inc.         47              6109         129.978723            1748        37.191489          17899      380.829787
+Twitter for Advertisers          7               679          97.000000             971       138.714286           5289      755.571429
+                 Loomly         10               254          25.400000             231        23.100000           1603      160.300000
+
+------------------------------------------------------------------------------
+GROUPED BY ['id']
+------------------------------------------------------------------------------
+Number of groups: 27,304
+
+Top 10 groups by retweetCount_sum:
+                                                              id  row_count  retweetCount_sum  retweetCount_mean  replyCount_sum  replyCount_mean  likeCount_sum  likeCount_mean
+238e62ef4f8a9183994efd7ff1b9af5e22d0855c43209fc5cd76d88bd27851b4          1            144615           144615.0           84059          84059.0         915221        915221.0
+effd2c7f6d49c68854f1b5150f685495e6284bf53b9d8ccc329eae56c250ec7f          1             98072            98072.0           72255          72255.0         549906        549906.0
+87812110bf0dfdbb0c71fc3b3ef34eb29e79a537693a49c4dfb2869b14d1ff3b          1             85177            85177.0           16460          16460.0         332628        332628.0
+fef581cd520af5dcf282c1016334aa563416408c5922844d53207b5dd790c461          1             81661            81661.0           32189          32189.0         667440        667440.0
+ca067e967ad773d3fa017651b5fb5554832623695d366af8e37197f859312e45          1             80331            80331.0           34865          34865.0         423537        423537.0
+16d5d3d44b26dffbbc97a664adecbe8a97310da8a55453890e880c1ef5406fa5          1             76450            76450.0          121270         121270.0         619478        619478.0
+8638b87f82566b0a76fb76c28000904ed2db810f81bb776d003e988ada8cc312          1             67113            67113.0           30215          30215.0         588065        588065.0
+a9baa4322cdb10ee8e9786dc2660a759332cadb5aec9dfee98de054559ceefc4          1             63924            63924.0           23684          23684.0         556198        556198.0
+abf7a91252010d2312053bea126002230511f14c55536a7065c431766e368964          1             57991            57991.0           11409          11409.0         414067        414067.0
+27d96e7cd84140daf8760bb3e099903c8b395a06a784feeecc5634ed507b4ce0          1             56073            56073.0           21068          21068.0         215125        215125.0
+
+==============================================================================
+END OF REPORT
+==============================================================================

@@ -1,0 +1,532 @@
+==============================================================================
+PURE PYTHON DESCRIPTIVE STATISTICS + GROUPED ANALYSIS
+Dataset: 2024_tw_posts_president_scored_anon.csv
+==============================================================================
+
+Sampling first 5,000 rows to infer schema...
+Detected grouping key set(s): [('source',), ('id',)]
+Detected grouping metric column(s): ['retweetCount', 'replyCount', 'likeCount']
+
+Running full pass over the file...
+
+Total rows:    27,304
+Total columns: 47
+
+------------------------------------------------------------------------------
+MISSING VALUES PER COLUMN
+------------------------------------------------------------------------------
+  id                                                   0 missing (  0.0%)
+  url                                                  0 missing (  0.0%)
+  source                                               0 missing (  0.0%)
+  retweetCount                                         0 missing (  0.0%)
+  replyCount                                           0 missing (  0.0%)
+  likeCount                                            0 missing (  0.0%)
+  quoteCount                                           0 missing (  0.0%)
+  viewCount                                            0 missing (  0.0%)
+  createdAt                                            0 missing (  0.0%)
+  lang                                                 0 missing (  0.0%)
+  bookmarkCount                                        0 missing (  0.0%)
+  isReply                                              0 missing (  0.0%)
+  isRetweet                                            0 missing (  0.0%)
+  isQuote                                              0 missing (  0.0%)
+  isConversationControlled                             0 missing (  0.0%)
+  quoteId                                         24,017 missing ( 88.0%)
+  inReplyToId                                     23,959 missing ( 87.7%)
+  month_year                                           0 missing (  0.0%)
+  illuminating_scored_message                          0 missing (  0.0%)
+  election_integrity_Truth_illuminating            1,270 missing (  4.7%)
+  advocacy_msg_type_illuminating                   1,270 missing (  4.7%)
+  issue_msg_type_illuminating                      1,270 missing (  4.7%)
+  attack_msg_type_illuminating                     1,270 missing (  4.7%)
+  image_msg_type_illuminating                      1,270 missing (  4.7%)
+  cta_msg_type_illuminating                        1,270 missing (  4.7%)
+  engagement_cta_subtype_illuminating              1,270 missing (  4.7%)
+  fundraising_cta_subtype_illuminating             1,270 missing (  4.7%)
+  voting_cta_subtype_illuminating                  1,270 missing (  4.7%)
+  covid_topic_illuminating                         1,270 missing (  4.7%)
+  economy_topic_illuminating                       1,270 missing (  4.7%)
+  education_topic_illuminating                     1,270 missing (  4.7%)
+  environment_topic_illuminating                   1,270 missing (  4.7%)
+  foreign_policy_topic_illuminating                1,270 missing (  4.7%)
+  governance_topic_illuminating                    1,270 missing (  4.7%)
+  health_topic_illuminating                        1,270 missing (  4.7%)
+  immigration_topic_illuminating                   1,270 missing (  4.7%)
+  lgbtq_issues_topic_illuminating                  1,270 missing (  4.7%)
+  military_topic_illuminating                      1,270 missing (  4.7%)
+  race_and_ethnicity_topic_illuminating            1,270 missing (  4.7%)
+  safety_topic_illuminating                        1,270 missing (  4.7%)
+  social_and_cultural_topic_illuminating           1,270 missing (  4.7%)
+  technology_and_privacy_topic_illuminating        1,270 missing (  4.7%)
+  womens_issue_topic_illuminating                  1,270 missing (  4.7%)
+  incivility_illuminating                          1,270 missing (  4.7%)
+  scam_illuminating                                1,270 missing (  4.7%)
+  freefair_illuminating                                0 missing (  0.0%)
+  fraud_illuminating                                   0 missing (  0.0%)
+
+------------------------------------------------------------------------------
+PER-COLUMN ANALYSIS
+------------------------------------------------------------------------------
+
+[id]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 27,304
+  Mode:          cc46051622b8a9c1b883a3bbf12c640b12ac1cbdc7f48a773b6cc2a65f03aa2d (1)
+  Top values:
+    - cc46051622b8a9c1b883a3bbf12c640b12ac1cbdc7f48a773b6cc2a65...: 1
+    - 0e3db0c35a290c6df3b737d15882846c108cc80a9b7e5ca64a0129d4e...: 1
+    - 256905919085d2946d5d187abc6cbe81a8abe3384793b362fa6aa4144...: 1
+    - a461b32b31e72b222df7fdda0a8e68b0092e31deda33a8652eb443459...: 1
+    - ca2795ec79d62adc1fff06c4d3bc9da0bbc899e32c9b218798ac62a0c...: 1
+
+[url]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 27,304
+  Mode:          f70a206472e9deaf6e313297c1efb891729ced346a0aeb34e16935d78f74b937 (1)
+  Top values:
+    - f70a206472e9deaf6e313297c1efb891729ced346a0aeb34e16935d78...: 1
+    - a1962f54943732a0dc006c33b4b6f5764c7085a1282a59439b891ee0e...: 1
+    - 4ddbbdb7f4d8ef62fccf3ed20c993bb665b8620fedb089e81b43c0c7b...: 1
+    - c7e729c427e714baf06d88a2856a1be07d4ff52e1e633412ce15b0160...: 1
+    - c589bd751d7e1d275901b184087716d3155a582b16430810211e1344d...: 1
+
+[source]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 14
+  Mode:          Twitter Web App (14930)
+  Top values:
+    - Twitter Web App: 14,930
+    - Twitter for iPhone: 8,494
+    - Sprout Social: 2,933
+    - Twitter Media Studio: 499
+    - Twitter for iPad: 266
+
+[retweetCount]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   1,322.06
+  Min:    0.00
+  Max:    144,615.00
+  Stdev:  3,405.00
+  Median: 333.00
+
+[replyCount]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   1,063.79
+  Min:    0.00
+  Max:    121,270.00
+  Stdev:  3,174.98
+  Median: 131.00
+
+[likeCount]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   6,913.69
+  Min:    0.00
+  Max:    915,221.00
+  Stdev:  21,590.31
+  Median: 1,406.00
+
+[quoteCount]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   128.08
+  Min:    0.00
+  Max:    123,320.00
+  Stdev:  1,131.53
+  Median: 17.00
+
+[viewCount]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   507,084.73
+  Min:    5.00
+  Max:    333,502,775.00
+  Stdev:  3,212,173.99
+  Median: 70,942.00
+
+[createdAt]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 27,014
+  Mode:          2023-10-06 04:55:21 (4)
+  Top values:
+    - 2023-10-06 04:55:21: 4
+    - 2024-05-28 17:19:24: 4
+    - 2024-08-30 03:04:08: 4
+    - 2023-09-08 16:19:09: 3
+    - 2023-09-08 16:19:04: 3
+
+[lang]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 12
+  Mode:          en (27281)
+  Top values:
+    - en: 27,281
+    - fr: 6
+    - tl: 4
+    - es: 3
+    - da: 3
+
+[bookmarkCount]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   136.21
+  Min:    0.00
+  Max:    42,693.00
+  Stdev:  712.58
+  Median: 21.00
+
+[isReply]
+  Inferred type: boolean   Missing: 0
+  Count: 27,304   True: 3,374   False: 23,930   True rate: 0.124
+
+[isRetweet]
+  Inferred type: boolean   Missing: 0
+  Count: 27,304   True: 0   False: 27,304   True rate: 0.000
+
+[isQuote]
+  Inferred type: boolean   Missing: 0
+  Count: 27,304   True: 3,240   False: 24,064   True rate: 0.119
+
+[isConversationControlled]
+  Inferred type: boolean   Missing: 0
+  Count: 27,304   True: 8   False: 27,296   True rate: 0.000
+
+[quoteId]
+  Inferred type: numeric   Missing: 24,017
+  Count:  3,287
+  Mean:   1,764,298,396,658,922,752.00
+  Min:    791,263,939,015,376,896.00
+  Max:    1,853,576,168,332,558,336.00
+  Stdev:  68,946,866,493,294,736.00
+  Median: 1,756,495,928,737,825,024.00
+
+[inReplyToId]
+  Inferred type: numeric   Missing: 23,959
+  Count:  3,345
+  Mean:   1,758,285,724,741,985,792.00
+  Min:    1,240,067,358,422,700,032.00
+  Max:    1,853,530,653,414,859,008.00
+  Stdev:  43,611,965,701,560,696.00
+  Median: 1,746,641,262,772,649,984.00
+
+[month_year]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 15
+  Mode:          2024-10 (3586)
+  Top values:
+    - 2024-10: 3,586
+    - 2024-09: 2,856
+    - 2024-08: 2,647
+    - 2023-09: 2,336
+    - 2023-11: 2,334
+
+[illuminating_scored_message]
+  Inferred type: categorical   Missing: 0
+  Count:         27,304
+  Unique values: 27,136
+  Mode:          36cb7d55fcf85362ca03f624c2f574f1f55f89db559b17da084df6e643afe5cd (21)
+  Top values:
+    - 36cb7d55fcf85362ca03f624c2f574f1f55f89db559b17da084df6e64...: 21
+    - 1d2cc25fad0d66a295d4fafdd590d71d0e027a1d2a58cf5db0c58ba09...: 18
+    - e85b31153cfcc753f8657eb033c8e8fb03f6da4c384da1d4e563eef69...: 10
+    - c3adbeed65888d91e375c51dc9cc936d137e35fc360ebed1763b58269...: 7
+    - de3c2805b2cea354c20c7fe117fc9c1885c9aea23ca9d1623d93d7c56...: 4
+
+[election_integrity_Truth_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.04
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.19
+  Median: 0.00
+
+[advocacy_msg_type_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.56
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.50
+  Median: 1.00
+
+[issue_msg_type_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.51
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.50
+  Median: 1.00
+
+[attack_msg_type_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.31
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.46
+  Median: 0.00
+
+[image_msg_type_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.23
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.42
+  Median: 0.00
+
+[cta_msg_type_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.11
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.31
+  Median: 0.00
+
+[engagement_cta_subtype_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.07
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.25
+  Median: 0.00
+
+[fundraising_cta_subtype_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.09
+  Median: 0.00
+
+[voting_cta_subtype_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.13
+  Median: 0.00
+
+[covid_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.09
+  Median: 0.00
+
+[economy_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.16
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.37
+  Median: 0.00
+
+[education_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.13
+  Median: 0.00
+
+[environment_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.03
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.17
+  Median: 0.00
+
+[foreign_policy_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.04
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.20
+  Median: 0.00
+
+[governance_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.15
+  Median: 0.00
+
+[health_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.06
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.23
+  Median: 0.00
+
+[immigration_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.07
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.25
+  Median: 0.00
+
+[lgbtq_issues_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.06
+  Median: 0.00
+
+[military_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.10
+  Median: 0.00
+
+[race_and_ethnicity_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.12
+  Median: 0.00
+
+[safety_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.04
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.19
+  Median: 0.00
+
+[social_and_cultural_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.05
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.22
+  Median: 0.00
+
+[technology_and_privacy_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.05
+  Median: 0.00
+
+[womens_issue_topic_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.02
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.15
+  Median: 0.00
+
+[incivility_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.18
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.38
+  Median: 0.00
+
+[scam_illuminating]
+  Inferred type: numeric   Missing: 1,270
+  Count:  26,034
+  Mean:   0.01
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.11
+  Median: 0.00
+
+[freefair_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.04
+  Median: 0.00
+
+[fraud_illuminating]
+  Inferred type: numeric   Missing: 0
+  Count:  27,304
+  Mean:   0.00
+  Min:    0.00
+  Max:    1.00
+  Stdev:  0.05
+  Median: 0.00
+
+==============================================================================
+GROUPED ANALYSIS
+==============================================================================
+
+Grouped by ('source',): 14 groups
+Top 10 groups by retweetCount_sum:
+
+source | row_count | retweetCount_sum | replyCount_sum | likeCount_sum
+----------------------------------------------------------------------------------------------------
+Twitter Web App | 14,930 | 19,664,442.00 | 10,737,719.00 | 99,579,349.00
+Sprout Social | 2,933 | 10,338,219.00 | 15,211,336.00 | 53,302,601.00
+Twitter for iPhone | 8,494 | 5,203,628.00 | 2,461,493.00 | 31,784,204.00
+Twitter Media Studio | 499 | 791,520.00 | 579,985.00 | 3,691,549.00
+Periscope | 103 | 61,463.00 | 41,412.00 | 255,786.00
+Twitter for iPad | 266 | 17,390.00 | 5,666.00 | 59,237.00
+TweetDeck Web App | 7 | 13,378.00 | 4,615.00 | 72,523.00
+Hootsuite Inc. | 47 | 6,109.00 | 1,748.00 | 17,899.00
+Twitter for Advertisers | 7 | 679.00 | 971.00 | 5,289.00
+Loomly | 10 | 254.00 | 231.00 | 1,603.00
+
+Grouped by ('id',): 27,304 groups
+Top 10 groups by retweetCount_sum:
+
+id | row_count | retweetCount_sum | replyCount_sum | likeCount_sum
+----------------------------------------------------------------------------------------------------
+238e62ef4f8a9183994efd7ff1b9af5e22d0855c43209fc5cd76d88bd27851b4 | 1 | 144,615.00 | 84,059.00 | 915,221.00
+effd2c7f6d49c68854f1b5150f685495e6284bf53b9d8ccc329eae56c250ec7f | 1 | 98,072.00 | 72,255.00 | 549,906.00
+87812110bf0dfdbb0c71fc3b3ef34eb29e79a537693a49c4dfb2869b14d1ff3b | 1 | 85,177.00 | 16,460.00 | 332,628.00
+fef581cd520af5dcf282c1016334aa563416408c5922844d53207b5dd790c461 | 1 | 81,661.00 | 32,189.00 | 667,440.00
+ca067e967ad773d3fa017651b5fb5554832623695d366af8e37197f859312e45 | 1 | 80,331.00 | 34,865.00 | 423,537.00
+16d5d3d44b26dffbbc97a664adecbe8a97310da8a55453890e880c1ef5406fa5 | 1 | 76,450.00 | 121,270.00 | 619,478.00
+8638b87f82566b0a76fb76c28000904ed2db810f81bb776d003e988ada8cc312 | 1 | 67,113.00 | 30,215.00 | 588,065.00
+a9baa4322cdb10ee8e9786dc2660a759332cadb5aec9dfee98de054559ceefc4 | 1 | 63,924.00 | 23,684.00 | 556,198.00
+abf7a91252010d2312053bea126002230511f14c55536a7065c431766e368964 | 1 | 57,991.00 | 11,409.00 | 414,067.00
+27d96e7cd84140daf8760bb3e099903c8b395a06a784feeecc5634ed507b4ce0 | 1 | 56,073.00 | 21,068.00 | 215,125.00
+
+==============================================================================
+END OF REPORT
+==============================================================================

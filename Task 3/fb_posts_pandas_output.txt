@@ -1,0 +1,293 @@
+==============================================================================
+PANDAS DESCRIPTIVE STATISTICS + GROUPED ANALYSIS
+Dataset: 2024_fb_posts_president_scored_anon.csv
+==============================================================================
+
+Loading and inferring schema...
+Detected grouping key set(s): [['Facebook_Id'], ['Facebook_Id', 'post_id']]
+Detected grouping metric column(s): ['Total Interactions', 'Likes', 'Comments']
+
+------------------------------------------------------------------------------
+BASIC STRUCTURE
+------------------------------------------------------------------------------
+Shape: 19,009 rows x 56 columns
+
+------------------------------------------------------------------------------
+MISSING VALUES PER COLUMN
+------------------------------------------------------------------------------
+                                                    missing_count  ...  inferred_type
+Facebook_Id                                                     0  ...    categorical
+post_id                                                         0  ...    categorical
+Page Category                                                2472  ...    categorical
+Page Admin Top Country                                       2729  ...    categorical
+Post Created                                                    0  ...    categorical
+Post Created Date                                               0  ...    categorical
+Post Created Time                                               0  ...    categorical
+Type                                                         2465  ...    categorical
+Total Interactions                                              0  ...        numeric
+Likes                                                           0  ...        numeric
+Comments                                                        0  ...        numeric
+Shares                                                          0  ...        numeric
+Love                                                            0  ...        numeric
+Wow                                                             0  ...        numeric
+Haha                                                            0  ...        numeric
+Sad                                                             0  ...        numeric
+Angry                                                           0  ...        numeric
+Care                                                            0  ...        numeric
+Video Share Status                                          15738  ...    categorical
+Is Video Owner?                                             15745  ...    categorical
+Post Views                                                   2465  ...        numeric
+Total Views                                                  2465  ...        numeric
+Total Views For All Crossposts                               2465  ...        numeric
+Video Length                                                15738  ...    categorical
+Sponsor Id                                                  19009  ...          empty
+Sponsor Name                                                19009  ...          empty
+Sponsor Category                                            19009  ...          empty
+Overperforming Score                                         2465  ...        numeric
+illuminating_scored_messageelection_integrity_T...          19009  ...          empty
+advocacy_msg_type_illuminating                                  0  ...        numeric
+issue_msg_type_illuminating                                     0  ...        numeric
+attack_msg_type_illuminating                                    0  ...        numeric
+image_msg_type_illuminating                                     0  ...        numeric
+cta_msg_type_illuminating                                       0  ...        numeric
+engagement_cta_subtype_illuminating                             0  ...        numeric
+fundraising_cta_subtype_illuminating                            0  ...        numeric
+voting_cta_subtype_illuminating                                 0  ...        numeric
+covid_topic_illuminating                                        0  ...        numeric
+economy_topic_illuminating                                      0  ...        numeric
+education_topic_illuminating                                    0  ...        numeric
+environment_topic_illuminating                                  0  ...        numeric
+foreign_policy_topic_illuminating                               0  ...        numeric
+governance_topic_illuminating                                   0  ...        numeric
+health_topic_illuminating                                       0  ...        numeric
+immigration_topic_illuminating                                  0  ...        numeric
+lgbtq_issues_topic_illuminating                                 0  ...        numeric
+military_topic_illuminating                                     0  ...        numeric
+race_and_ethnicity_topic_illuminating                           0  ...        numeric
+safety_topic_illuminating                                       0  ...        numeric
+social_and_cultural_topic_illuminating                          0  ...        numeric
+technology_and_privacy_topic_illuminating                       0  ...        numeric
+womens_issue_topic_illuminating                                 0  ...        numeric
+incivility_illuminating                                         0  ...        numeric
+scam_illuminating                                             949  ...        numeric
+freefair_illuminating                                           0  ...        numeric
+fraud_illuminating                                              0  ...        numeric
+
+[56 rows x 3 columns]
+
+------------------------------------------------------------------------------
+DESCRIBE() -- NUMERIC COLUMNS (41)
+------------------------------------------------------------------------------
+                                             count         mean           std     min    25%     50%      75%         max
+Total Interactions                         19009.0  4190.439634  19003.080332    0.00  65.00  283.00  1511.00   696853.00
+Likes                                      19009.0  2377.695407  11253.469669    0.00  31.00  139.00   738.00   351979.00
+Comments                                   19009.0   901.583197   3681.980096    0.00   8.00   48.00   354.00    93872.00
+Shares                                     19009.0   320.538955   1722.159879    0.00   3.00   21.00   102.00    76150.00
+Love                                       19009.0   413.877321   3730.940450    0.00   0.00    4.00    70.00   244482.00
+Wow                                        19009.0     5.868326     52.946979    0.00   0.00    1.00     3.00     4345.00
+Haha                                       19009.0   105.719712    942.034248    0.00   0.00    2.00    29.00    99276.00
+Sad                                        19009.0    10.172182    418.325007    0.00   0.00    0.00     2.00    56111.00
+Angry                                      19009.0    20.055500    156.020089    0.00   0.00    1.00     9.00    11814.00
+Care                                       19009.0    34.929034    790.103213    0.00   0.00    0.00     6.00    85236.00
+Post Views                                 16544.0  6485.058511  90392.958445    0.00   0.00    0.00     0.00  4276477.00
+Total Views                                16544.0  7461.847014  95976.278848    0.00   0.00    0.00     0.00  4462155.00
+Total Views For All Crossposts             16544.0  3555.937984  88094.048319    0.00   0.00    0.00     0.00  4499458.00
+Overperforming Score                       16544.0    -2.744160      7.808477 -198.75  -3.87   -1.62     1.16      246.78
+advocacy_msg_type_illuminating             19009.0     0.549266      0.497580    0.00   0.00    1.00     1.00        1.00
+issue_msg_type_illuminating                19009.0     0.460308      0.498435    0.00   0.00    0.00     1.00        1.00
+attack_msg_type_illuminating               19009.0     0.216687      0.411998    0.00   0.00    0.00     0.00        1.00
+image_msg_type_illuminating                19009.0     0.148561      0.355665    0.00   0.00    0.00     0.00        1.00
+cta_msg_type_illuminating                  19009.0     0.132832      0.339402    0.00   0.00    0.00     0.00        1.00
+engagement_cta_subtype_illuminating        19009.0     0.090852      0.287406    0.00   0.00    0.00     0.00        1.00
+fundraising_cta_subtype_illuminating       19009.0     0.018412      0.134441    0.00   0.00    0.00     0.00        1.00
+voting_cta_subtype_illuminating            19009.0     0.023410      0.151206    0.00   0.00    0.00     0.00        1.00
+covid_topic_illuminating                   19009.0     0.052396      0.222831    0.00   0.00    0.00     0.00        1.00
+economy_topic_illuminating                 19009.0     0.090378      0.286730    0.00   0.00    0.00     0.00        1.00
+education_topic_illuminating               19009.0     0.014993      0.121527    0.00   0.00    0.00     0.00        1.00
+environment_topic_illuminating             19009.0     0.022253      0.147508    0.00   0.00    0.00     0.00        1.00
+foreign_policy_topic_illuminating          19009.0     0.036877      0.188465    0.00   0.00    0.00     0.00        1.00
+governance_topic_illuminating              19009.0     0.031091      0.173567    0.00   0.00    0.00     0.00        1.00
+health_topic_illuminating                  19009.0     0.048661      0.215164    0.00   0.00    0.00     0.00        1.00
+immigration_topic_illuminating             19009.0     0.040823      0.197885    0.00   0.00    0.00     0.00        1.00
+lgbtq_issues_topic_illuminating            19009.0     0.003367      0.057928    0.00   0.00    0.00     0.00        1.00
+military_topic_illuminating                19009.0     0.005576      0.074468    0.00   0.00    0.00     0.00        1.00
+race_and_ethnicity_topic_illuminating      19009.0     0.021569      0.145274    0.00   0.00    0.00     0.00        1.00
+safety_topic_illuminating                  19009.0     0.032195      0.176523    0.00   0.00    0.00     0.00        1.00
+social_and_cultural_topic_illuminating     19009.0     0.061708      0.240630    0.00   0.00    0.00     0.00        1.00
+technology_and_privacy_topic_illuminating  19009.0     0.002052      0.045250    0.00   0.00    0.00     0.00        1.00
+womens_issue_topic_illuminating            19009.0     0.025462      0.157527    0.00   0.00    0.00     0.00        1.00
+incivility_illuminating                    19009.0     0.127887      0.333972    0.00   0.00    0.00     0.00        1.00
+scam_illuminating                          18060.0     0.020210      0.140723    0.00   0.00    0.00     0.00        1.00
+freefair_illuminating                      19009.0     0.002841      0.053224    0.00   0.00    0.00     0.00        1.00
+fraud_illuminating                         19009.0     0.008627      0.092485    0.00   0.00    0.00     0.00        1.00
+
+------------------------------------------------------------------------------
+BOOLEAN COLUMNS (0)
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+DESCRIBE() -- CATEGORICAL COLUMNS (15)
+------------------------------------------------------------------------------
+                                                    count unique                                                top   freq
+Facebook_Id                                         19009     21  32fc18da91029ff09bf74fe9887eace6b5d2145809d583...   9013
+post_id                                             19009  19009  8570b69695e00d8f06b12398ed525497e1712b5369c6fc...      1
+Page Category                                       16537      6                                             PERSON   9453
+Page Admin Top Country                              16280      1                                                 US  16280
+Post Created                                        19009  18951                            2023-11-14 11:11:44 EST      2
+Post Created Date                                   19009    425                                         2024-10-31    103
+Post Created Time                                   19009  16102                                           19:42:00      7
+Type                                                16544      9                                               Link   7404
+Video Share Status                                   3271      3                                              owned   3100
+Is Video Owner?                                      3264      2                                                Yes   3181
+Video Length                                         3271    774                                           00:00:30     83
+Sponsor Id                                              0      0                                                NaN    NaN
+Sponsor Name                                            0      0                                                NaN    NaN
+Sponsor Category                                        0      0                                                NaN    NaN
+illuminating_scored_messageelection_integrity_T...      0      0                                                NaN    NaN
+
+------------------------------------------------------------------------------
+CATEGORICAL COLUMNS: nunique() / top value_counts()
+------------------------------------------------------------------------------
+
+[Facebook_Id]  nunique = 21
+Facebook_Id
+32fc18da91029ff09bf74fe9887eace6b5d2145809d583f696e344530508b064    9013
+bfe51c6ac2cab17ba5c85883e76f61398031ed57e4cf62d19fd483548ebb904b    1431
+ac24f31c4d4b3d5555065fa9558bdca4ab4b5e1379922875ae9e6e32f1d46d25    1231
+7f5731ac8e6959576e781064b5fa76e059200cdfc3f4e0d7b68bc98792d2cf5b    1158
+a3fa0d15dd83b910295d0b17f9d341e737eddcb8d9b8081758140584c710406e    1074
+
+[post_id]  nunique = 19,009
+post_id
+8570b69695e00d8f06b12398ed525497e1712b5369c6fc2138fe98f69811c138    1
+41ec27cecd8af40007a9faf8c3e5c9225bcff0b8d58856563bbc9d59d7dbb6e6    1
+1dcb5e00cd1c8d7ee141922f50f29e59e96328231b6937870e87029c97b26377    1
+3e5e0a047865ab02fe0f49c343963239fe7774b63e8ab6001b6ec18f4d37eeac    1
+b83adc0e8ac0aedd39f55b72d723729e114a83d41fd48b1b13c7ec782c9a0649    1
+
+[Page Category]  nunique = 6
+Page Category
+PERSON                 9453
+ACTOR                  3304
+POLITICIAN             2595
+POLITICAL_CANDIDATE    1161
+ENTREPRENEUR             23
+
+[Page Admin Top Country]  nunique = 1
+Page Admin Top Country
+US    16280
+
+[Post Created]  nunique = 18,951
+Post Created
+2023-11-14 11:11:44 EST    2
+2023-11-22 19:20:24 EST    2
+2023-12-22 11:22:14 EST    2
+2024-01-06 18:47:00 EST    2
+2024-01-30 12:28:10 EST    2
+
+[Post Created Date]  nunique = 425
+Post Created Date
+2024-10-31    103
+2024-01-10    102
+2024-01-15     96
+2024-01-06     95
+2024-10-30     94
+
+[Post Created Time]  nunique = 16,102
+Post Created Time
+19:42:00    7
+17:30:01    7
+19:30:01    6
+15:40:00    6
+12:00:16    6
+
+[Type]  nunique = 9
+Type
+Link            7404
+Photo           3820
+Native Video    2931
+Status          1387
+YouTube          353
+
+[Video Share Status]  nunique = 3
+Video Share Status
+owned        3100
+share          99
+crosspost      72
+
+[Is Video Owner?]  nunique = 2
+Is Video Owner?
+Yes    3181
+No       83
+
+[Video Length]  nunique = 774
+Video Length
+00:00:30    83
+00:01:00    50
+00:00:59    37
+00:00:37    33
+00:00:45    32
+
+[Sponsor Id]  nunique = 0
+Series([], )
+
+[Sponsor Name]  nunique = 0
+Series([], )
+
+[Sponsor Category]  nunique = 0
+Series([], )
+
+[illuminating_scored_messageelection_integrity_Truth_illuminating]  nunique = 0
+Series([], )
+
+------------------------------------------------------------------------------
+LIST-VALUED COLUMNS (0) -- exploded item frequency
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+DICT / NESTED-STRUCTURE COLUMNS (0)
+------------------------------------------------------------------------------
+
+==============================================================================
+GROUPED ANALYSIS
+==============================================================================
+
+------------------------------------------------------------------------------
+GROUPED BY ['Facebook_Id']
+------------------------------------------------------------------------------
+Number of groups: 21
+
+Top 10 groups by Total Interactions_sum:
+                                                     Facebook_Id  row_count  Total Interactions_sum  Total Interactions_mean  Likes_sum   Likes_mean  Comments_sum  Comments_mean
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a        616                41878650             67984.821429   24267226 39394.847403       8574994   13920.444805
+d6008f090fcb5df7263efe969d3fc268e0ec1f6d75c8ff692b2eeacc9c48b309        929                11009368             11850.772874    4725536  5086.691066       3448408    3711.956943
+ac24f31c4d4b3d5555065fa9558bdca4ab4b5e1379922875ae9e6e32f1d46d25       1231                10126556              8226.284322    6207838  5042.922827       2268702    1842.974817
+a3fa0d15dd83b910295d0b17f9d341e737eddcb8d9b8081758140584c710406e       1074                 3614229              3365.203911    2724349  2536.637803        402720     374.972067
+fedbfaab19b5112a6889b862314ca9d3a626b22df7f959db3d9b1c4c54e69948        643                 3392013              5275.292379    2087526  3246.541213        416583     647.874028
+32fc18da91029ff09bf74fe9887eace6b5d2145809d583f696e344530508b064       9013                 2836628               314.726284    1553812   172.396760        357600      39.676024
+8e8dac0ee6f22255b9d9365845a7fb830627cc27d34934c4f097689ec8da6719        269                 2212499              8224.903346    1463720  5441.338290        266200     989.591078
+7f5731ac8e6959576e781064b5fa76e059200cdfc3f4e0d7b68bc98792d2cf5b       1158                 2028172              1751.443869     923786   797.742660        704934     608.751295
+bfe51c6ac2cab17ba5c85883e76f61398031ed57e4cf62d19fd483548ebb904b       1431                  706722               493.865828     375527   262.422781        116204      81.204752
+b1daf9f2909abed80b7e02520dfd0bfdc22128e3b92c2aba8cb3b44a6bc42cbe        336                  521725              1552.752976     194490   578.839286        207192     616.642857
+
+------------------------------------------------------------------------------
+GROUPED BY ['Facebook_Id', 'post_id']
+------------------------------------------------------------------------------
+Number of groups: 19,009
+
+Top 10 groups by Total Interactions_sum:
+                                                     Facebook_Id                                                          post_id  row_count  Total Interactions_sum  Total Interactions_mean  Likes_sum  Likes_mean  Comments_sum  Comments_mean
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a 242856fb8e359799e1c63283f77342292f963f5abb64a058f310155b583263c2          1                  696853                 696853.0     315973    315973.0         64474        64474.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a b3a3911160a6b8ed842df94593b6fdd8d3143a2b5ae007e32c76f40b86083497          1                  470087                 470087.0     351979    351979.0         69026        69026.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a f8c1ff50c7c4bb73d09fc9cdc77b1c9ae083068f53d2b09a6e61998f304c22d1          1                  457320                 457320.0     197632    197632.0         93872        93872.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a dfc2669babf83a5c8e6230c8dab662fe25cd3dbf2c18b93bd3b47381153edc32          1                  432928                 432928.0     257927    257927.0         53454        53454.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a 317f626dae1583eb59daa6975a2f2684fbb9b56ec423125d7b2a886102465bd8          1                  429583                 429583.0     250120    250120.0         67361        67361.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a 8d2460a6db7b16f5d9abdafbb64865cf62f4de684ad7754d9511955a4e9df2db          1                  360659                 360659.0     199316    199316.0         39937        39937.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a d352c5bca0c9f70afbc99d795c5f872f015a5566c49cb8369b755f5ff0fe12c0          1                  360072                 360072.0     157199    157199.0         77304        77304.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a 13369fa27b142fa2a08ef480e01dff19454036cc2446db96d22d152cffe798ef          1                  357151                 357151.0     248510    248510.0         86110        86110.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a d27c5187db05d18f3f0b9f8f4b6df2ecc19d9cdd4622be9f2089cde2aeb813dc          1                  354234                 354234.0     158123    158123.0         77016        77016.0
+7ec2cb4abf8effe3d91de57944c56b938b4f33059a6e33dfe23b549cf229989a fe868cae8a5a4b120a080d7e39a30c7fc0a6443ae4197ed6796c0cca4925ff29          1                  346936                 346936.0     185735    185735.0         39011        39011.0
+
+==============================================================================
+END OF REPORT
+==============================================================================
