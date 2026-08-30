@@ -1,0 +1,285 @@
+Loading: /mnt/user-data/uploads/fb_ads_president_scored_anon.csv
+
+==============================================================================
+PANDAS DESCRIPTIVE STATISTICS + GROUPED ANALYSIS
+==============================================================================
+
+------------------------------------------------------------------------------
+BASIC STRUCTURE
+------------------------------------------------------------------------------
+Shape: 246,745 rows x 40 columns
+
+Column dtypes:
+page_id                                          str
+page_name                                        str
+ad_id                                            str
+ad_creation_time                                 str
+ad_delivery_start_time                           str
+ad_delivery_stop_time                            str
+bylines                                          str
+currency                                         str
+estimated_audience_size                      float64
+impressions                                  float64
+spend                                        float64
+publisher_platforms                              str
+illuminating_scored_message                      str
+illuminating_mentions                            str
+illuminating_scam                              int64
+illuminating_election_integrity_Truth          int64
+illuminating_msg_type_advocacy                 int64
+illuminating_msg_type_issue                    int64
+illuminating_msg_type_attack                   int64
+illuminating_msg_type_image                    int64
+illuminating_msg_type_cta                      int64
+illuminating_cta_subtype_engagement            int64
+illuminating_cta_subtype_fundraising           int64
+illuminating_cta_subtype_voting                int64
+illuminating_topic_covid                       int64
+illuminating_topic_economy                     int64
+illuminating_topic_education                   int64
+illuminating_topic_environment                 int64
+illuminating_topic_foreign_policy              int64
+illuminating_topic_governance                  int64
+illuminating_topic_health                      int64
+illuminating_topic_immigration                 int64
+illuminating_topic_lgbtq_issues                int64
+illuminating_topic_military                    int64
+illuminating_topic_race_and_ethnicity          int64
+illuminating_topic_safety                      int64
+illuminating_topic_social_and_cultural         int64
+illuminating_topic_technology_and_privacy      int64
+illuminating_topic_womens_issue                int64
+illuminating_incivility                        int64
+dtype: object
+
+------------------------------------------------------------------------------
+MISSING VALUES PER COLUMN
+------------------------------------------------------------------------------
+                                           missing_count  missing_pct
+page_id                                                0         0.00
+page_name                                              0         0.00
+ad_id                                                  0         0.00
+ad_creation_time                                       0         0.00
+ad_delivery_start_time                                 0         0.00
+ad_delivery_stop_time                               2159         0.87
+bylines                                             1009         0.41
+currency                                               0         0.00
+estimated_audience_size                              579         0.23
+impressions                                            0         0.00
+spend                                                  0         0.00
+publisher_platforms                                    0         0.00
+illuminating_scored_message                            0         0.00
+illuminating_mentions                                  0         0.00
+illuminating_scam                                      0         0.00
+illuminating_election_integrity_Truth                  0         0.00
+illuminating_msg_type_advocacy                         0         0.00
+illuminating_msg_type_issue                            0         0.00
+illuminating_msg_type_attack                           0         0.00
+illuminating_msg_type_image                            0         0.00
+illuminating_msg_type_cta                              0         0.00
+illuminating_cta_subtype_engagement                    0         0.00
+illuminating_cta_subtype_fundraising                   0         0.00
+illuminating_cta_subtype_voting                        0         0.00
+illuminating_topic_covid                               0         0.00
+illuminating_topic_economy                             0         0.00
+illuminating_topic_education                           0         0.00
+illuminating_topic_environment                         0         0.00
+illuminating_topic_foreign_policy                      0         0.00
+illuminating_topic_governance                          0         0.00
+illuminating_topic_health                              0         0.00
+illuminating_topic_immigration                         0         0.00
+illuminating_topic_lgbtq_issues                        0         0.00
+illuminating_topic_military                            0         0.00
+illuminating_topic_race_and_ethnicity                  0         0.00
+illuminating_topic_safety                              0         0.00
+illuminating_topic_social_and_cultural                 0         0.00
+illuminating_topic_technology_and_privacy              0         0.00
+illuminating_topic_womens_issue                        0         0.00
+illuminating_incivility                                0         0.00
+
+------------------------------------------------------------------------------
+DESCRIBE() -- NUMERIC COLUMNS (29)
+------------------------------------------------------------------------------
+                                              count           mean            std    min      25%       50%        75%        max
+estimated_audience_size                    246166.0  557771.987921  409455.776745  550.0  75000.5  300000.5  1000001.0  1000001.0
+impressions                                246745.0   45602.021360  136790.737864  499.5    499.5    3499.5    22499.5  1000000.0
+spend                                      246745.0    1061.791434    4992.560749   49.5     49.5      49.5      449.5   474999.5
+illuminating_scam                          246745.0       0.071633       0.257879    0.0      0.0       0.0        0.0        1.0
+illuminating_election_integrity_Truth      246745.0       0.050088       0.218127    0.0      0.0       0.0        0.0        1.0
+illuminating_msg_type_advocacy             246745.0       0.548631       0.497630    0.0      0.0       1.0        1.0        1.0
+illuminating_msg_type_issue                246745.0       0.381649       0.485792    0.0      0.0       0.0        1.0        1.0
+illuminating_msg_type_attack               246745.0       0.271856       0.444917    0.0      0.0       0.0        1.0        1.0
+illuminating_msg_type_image                246745.0       0.222704       0.416062    0.0      0.0       0.0        0.0        1.0
+illuminating_msg_type_cta                  246745.0       0.572769       0.494677    0.0      0.0       1.0        1.0        1.0
+illuminating_cta_subtype_engagement        246745.0       0.124870       0.330572    0.0      0.0       0.0        0.0        1.0
+illuminating_cta_subtype_fundraising       246745.0       0.228487       0.419859    0.0      0.0       0.0        0.0        1.0
+illuminating_cta_subtype_voting            246745.0       0.143845       0.350933    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_covid                   246745.0       0.024876       0.155747    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_economy                 246745.0       0.122122       0.327427    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_education               246745.0       0.014327       0.118833    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_environment             246745.0       0.021249       0.144212    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_foreign_policy          246745.0       0.005265       0.072366    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_governance              246745.0       0.025642       0.158065    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_health                  246745.0       0.109190       0.311878    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_immigration             246745.0       0.033569       0.180118    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_lgbtq_issues            246745.0       0.003230       0.056742    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_military                246745.0       0.002176       0.046601    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_race_and_ethnicity      246745.0       0.012434       0.110812    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_safety                  246745.0       0.033723       0.180516    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_social_and_cultural     246745.0       0.105838       0.307631    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_technology_and_privacy  246745.0       0.001155       0.033966    0.0      0.0       0.0        0.0        1.0
+illuminating_topic_womens_issue            246745.0       0.080909       0.272697    0.0      0.0       0.0        0.0        1.0
+illuminating_incivility                    246745.0       0.187526       0.390334    0.0      0.0       0.0        0.0        1.0
+
+------------------------------------------------------------------------------
+DESCRIBE() -- NON-NUMERIC COLUMNS (9)
+------------------------------------------------------------------------------
+                              count  unique                                                top    freq
+page_id                      246745    4475                                page_id_24413227922   55503
+page_name                    246745    4546                                      Kamala Harris   55503
+ad_id                        246745  246745  0ddb025b8544e2d58e6977ad417e742a52522b3e1fc1c9...       1
+ad_creation_time             246745     547                                         2024-10-27    8619
+ad_delivery_start_time       246745     558                                         2024-10-28   10089
+ad_delivery_stop_time        244586     433                                         2024-11-05   14222
+bylines                      245736    3790                               HARRIS FOR PRESIDENT   49788
+currency                     246745      18                                                USD  246599
+illuminating_scored_message  246745   37338  9b2d5b4678781e53038e91ea5324530a03f27dc1d0e5f6...    3046
+
+------------------------------------------------------------------------------
+CATEGORICAL COLUMNS: nunique() / value_counts()
+------------------------------------------------------------------------------
+
+[page_id]  nunique = 4,475
+page_id
+page_id_24413227922        55503
+page_id_153080620724       23988
+page_id_7860876103         14822
+page_id_255594894306221    10461
+page_id_167251659804799     9851
+
+[page_name]  nunique = 4,546
+page_name
+Kamala Harris       55503
+Donald J. Trump     23988
+Joe Biden           14822
+The Daily Scroll    10461
+Kamala HQ            7564
+
+[ad_id]  nunique = 246,745
+ad_id
+0ddb025b8544e2d58e6977ad417e742a52522b3e1fc1c9d9b61c57148f8d72fc    1
+86229868e6bde3661724fe02da93504bb4fb5da8c2550d7b7cf193c687e89fa6    1
+07b5aefc27e872e971f793e49aac38496fa62e484f3928e2b6a2b6e3e08cac8d    1
+c62978153c04116d88ead49379916855f2cb58bf788631f26f3f1fcb2962ad48    1
+785e91ef18a5794565af03a6df4e7077fe1d915bfb34025019f3d42f43fcf9e8    1
+
+[ad_creation_time]  nunique = 547
+ad_creation_time
+2024-10-27    8619
+2024-10-28    7356
+2024-10-26    6414
+2024-10-23    5021
+2024-10-25    4769
+
+[ad_delivery_start_time]  nunique = 558
+ad_delivery_start_time
+2024-10-28    10089
+2024-10-27     7290
+2024-10-26     6793
+2024-10-25     5311
+2024-10-23     4598
+
+[ad_delivery_stop_time]  nunique = 433
+ad_delivery_stop_time
+2024-11-05    14222
+2024-10-27     5169
+2024-10-26     4282
+2024-10-29     3793
+2024-10-28     3447
+
+[bylines]  nunique = 3,790
+bylines
+HARRIS FOR PRESIDENT                        49788
+HARRIS VICTORY FUND                         32612
+BIDEN VICTORY FUND                          15539
+DONALD J. TRUMP FOR PRESIDENT 2024, INC.    15112
+Trump National Committee JFC                 7279
+
+[currency]  nunique = 18
+currency
+USD    246599
+INR        63
+GBP        17
+EUR        11
+PKR         8
+
+[illuminating_scored_message]  nunique = 37,338
+illuminating_scored_message
+9b2d5b4678781e53038e91ea5324530a03f27dc1d0e5f6c9bc9d493a23be9de0    3046
+9B2D5B4678781E53038E91EA5324530A03F27DC1D0E5F6C9BC9D493A23BE9DE0    2926
+82459467ad44f717f2089911f5210cce1ff025dc0cee03bdb2e60da827edb282     947
+82459467AD44F717F2089911F5210CCE1FF025DC0CEE03BDB2E60DA827EDB282     940
+3b1d236346df93fd259a23d523f6deeed9b9939158b6f34b11854ea0f97ef35d     683
+
+------------------------------------------------------------------------------
+LIST-VALUED COLUMNS (exploded item frequency)
+------------------------------------------------------------------------------
+
+[publisher_platforms]  unique items = 4
+publisher_platforms
+facebook            238350
+instagram           223434
+audience_network       566
+messenger              566
+
+[illuminating_mentions]  unique items = 25
+illuminating_mentions
+Donald Trump       78324
+Kamala Harris      53239
+Joe Biden          24247
+President Trump    22153
+President Biden    16517
+
+==============================================================================
+GROUPED ANALYSIS
+==============================================================================
+
+------------------------------------------------------------------------------
+GROUPED BY ['page_id']
+------------------------------------------------------------------------------
+Number of groups: 4,475
+
+Top 10 groups by total spend:
+                 page_id  row_count  spend_sum  spend_mean  impressions_mean
+     page_id_24413227922      55503 82823398.5 1492.232825      53753.716069
+      page_id_7860876103      14822 26375389.0 1779.475712      56764.179328
+    page_id_153080620724      23988 19621356.0  817.965483      27904.747144
+ page_id_167251659804799       9851 10604924.5 1076.532789      33082.387372
+      page_id_6958677033       6581  7637759.5 1160.577344      37792.314694
+ page_id_255594894306221      10461  6140619.5  587.001195      42767.307045
+ page_id_323544107517320       1210  4267645.0 3526.979339     233566.488017
+      page_id_6815841748       2203  4246498.5 1927.598048      50669.500227
+ page_id_318975057964832       1243  3268528.5 2629.548270      72894.518906
+page_id_1411189272541151       2005  2881147.5 1436.981297      85112.976060
+
+------------------------------------------------------------------------------
+GROUPED BY ['page_id', 'ad_id']
+------------------------------------------------------------------------------
+Number of groups: 246,745
+
+Top 10 groups by total spend:
+                 page_id                                                            ad_id  row_count  spend_sum  spend_mean  impressions_mean
+ page_id_286177181254418 8e03ee4c26e13651ea6ce3726512ed562b629c224de6183329cd9c00a34837c4          1   474999.5    474999.5         1000000.0
+ page_id_286177181254418 57a795f3f2f16923ad9ff85f8a3bc8bf6ab2ba3aa1157a0c457db502476d005a          1   324999.5    324999.5         1000000.0
+     page_id_24413227922 4557fcd70c178cfabb2f0bd9a773891ed373a20c5b1639bf058ee3890efdd836          1   274999.5    274999.5         1000000.0
+     page_id_92925746942 f8f0558faf38bceb159e800f4fd5379200de2a03ef7e2964efe2d411090b16f3          1   274999.5    274999.5         1000000.0
+     page_id_24413227922 9c6dd7c906452bf913cb93076b1b3b2ea047ef2e1d44e19c039965e57781ec64          1   224999.5    224999.5         1000000.0
+     page_id_24413227922 cf1a49c73e9701d94e752ad66dddaf9b5e281ebc6711f4fa4d787aa8106cf118          1   224999.5    224999.5         1000000.0
+page_id_1354352708000334 a761d2f9c0dfdb3eee8e8906b45feb28b23a5821ae7656a85791ce506bcf0507          1   224999.5    224999.5         1000000.0
+    page_id_153080620724 db067e951d6feb32a8f2867cf951d3dd93db7c9b9d60cc828c3728de756c7f3e          1   187499.5    187499.5         1000000.0
+ page_id_492560797264254 3f5e6681cccf6eca44f18ae6121407996104a66bfb7988d2afd880a0e416cc7d          1   187499.5    187499.5         1000000.0
+     page_id_24413227922 8365438c60659dee3005afb0927fcc927d11cb762d6a57b9911a1eea73c9fc98          1   187499.5    187499.5         1000000.0
+
+==============================================================================
+END OF REPORT
+==============================================================================
