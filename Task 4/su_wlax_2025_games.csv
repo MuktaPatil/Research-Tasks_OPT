@@ -1,0 +1,20 @@
+date,opponent,opponent_rank,location,is_conference,result,su_score,opp_score,overtime,attendance
+2025-02-07,UAlbany,,Home,No,W,21,9,No,2127
+2025-02-15,Maryland,7,Away,No,W,15,9,No,758
+2025-02-18,Cornell,,Home,No,W,18,10,No,2214
+2025-02-22,North Carolina,2,Away,Yes,L,8,16,No,1088
+2025-02-25,Northwestern,3,Home,No,L,8,12,No,2080
+2025-03-01,Clemson,14,Home,Yes,L,8,9,No,2899
+2025-03-07,Stanford,7,Home,Yes,W,14,13,Yes,2165
+2025-03-10,Johns Hopkins,10,Home,No,L,13,14,Yes,2049
+2025-03-15,Pitt,,Away,Yes,W,17,11,No,600
+2025-03-19,Loyola,17,Away,No,W,14,12,No,432
+2025-03-23,Notre Dame,20,Home,Yes,W,12,11,No,3622
+2025-03-29,Virginia,11,Home,Yes,W,13,12,No,2736
+2025-04-02,Yale,13,Away,No,L,10,13,No,653
+2025-04-05,California,,Away,Yes,W,18,6,No,250
+2025-04-12,Virginia Tech,,Away,Yes,L,11,14,No,157
+2025-04-17,Boston College,2,Home,Yes,L,2,17,No,1645
+2025-04-22,Stanford,13,Neutral,No,L,10,15,No,0
+2025-05-09,Brown,,Neutral,No,W,15,9,No,583
+2025-05-11,Yale,5,Away,No,L,8,9,No,608
