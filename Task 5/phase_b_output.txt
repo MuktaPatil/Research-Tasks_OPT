@@ -1,0 +1,71 @@
+======================================================================
+PHASE B DERIVED METRICS: 2025 Syracuse Women's Lacrosse
+======================================================================
+
+--- Fourth-Quarter Defensive Differential ---
+Period    SU   Opp   Diff
+Q1        74    64    +10
+Q2        65    52    +13
+Q3        48    45     +3
+Q4        47    59    -12
+OT         0     1     -1
+OT2        1     0     +1
+
+--- Record by Margin ---
+One-goal games:        3-3  (6 games)
+Two-goal-or-fewer games: 4-3  (7 games)
+
+Games decided by 2 goals or fewer:
+  2025-03-01  Clemson            L 8-9  (margin -1)
+  2025-03-07  Stanford           W 14-13  (margin +1)  [OT]
+  2025-03-10  Johns Hopkins      L 13-14  (margin -1)  [OT]
+  2025-03-23  Notre Dame         W 12-11  (margin +1)
+  2025-03-29  Virginia           W 13-12  (margin +1)
+  2025-05-11  Yale               L 8-9  (margin -1)
+  2025-03-19  Loyola             W 14-12  (margin +2)
+
+Of 9 total losses, 3 were decided by 2 goals or fewer -- i.e. plausibly winnable with a small swing in execution.
+
+--- Metric 1: Game Changer Score, ALL players (top 10) ---
+NOTE: per-GP rate metrics reward small-sample players (see the
+Olivia Adamson case, 3 GP) -- see the 'regulars only' table below
+for a fairer view of who to build a game plan around.
+Player                  Score   GP   Pts   DC   GB   CT   TO
+Olivia Adamson           5.80    3    16    5    2    1    7
+Emma Ward                3.49   19    76    0    6    2   41
+Emma Muchnick            2.63   19    41   13   27    9   31
+Joely Caramelli          2.56   19    20   39   24   11    8
+Alexa Vogelman           2.48   19    27   31   25   13   27
+Caroline Trinkaus        2.42   19    43    8    6    5   16
+Mileena Cotter           1.82   19    23   24   11   10   26
+Molly Guzik              1.53   19    19   13   15    8   14
+Gracie Britton           1.48   19    30    1    8    0   16
+Coco Vandiver            1.36   19     0    1   34   40    3
+
+--- Metric 1b: Game Changer Score, REGULARS ONLY (GP >= 10) ---
+Emma Ward                3.49   19    76    0    6    2   41
+Emma Muchnick            2.63   19    41   13   27    9   31
+Joely Caramelli          2.56   19    20   39   24   11    8
+Alexa Vogelman           2.48   19    27   31   25   13   27
+Caroline Trinkaus        2.42   19    43    8    6    5   16
+Mileena Cotter           1.82   19    23   24   11   10   26
+Molly Guzik              1.53   19    19   13   15    8   14
+Gracie Britton           1.48   19    30    1    8    0   16
+Coco Vandiver            1.36   19     0    1   34   40    3
+Sam DeVito               1.26   19    10   11   22   13   11
+
+--- Metric 2: Shooting Efficiency, min. 10 shots (top 10) ---
+Carlie Desimone        1.000 pts/shot  (12 pts / 12 shots)
+Emma Ward              0.987 pts/shot  (76 pts / 77 shots)
+Olivia Adamson         0.889 pts/shot  (16 pts / 18 shots)
+Sam DeVito             0.833 pts/shot  (10 pts / 12 shots)
+Gracie Britton         0.732 pts/shot  (30 pts / 41 shots)
+Caroline Trinkaus      0.597 pts/shot  (43 pts / 72 shots)
+Alexa Vogelman         0.587 pts/shot  (27 pts / 46 shots)
+Emma Muchnick          0.577 pts/shot  (41 pts / 71 shots)
+Molly Guzik            0.559 pts/shot  (19 pts / 34 shots)
+Annie Parker           0.538 pts/shot  (7 pts / 13 shots)
+
+======================================================================
+END OF REPORT
+======================================================================

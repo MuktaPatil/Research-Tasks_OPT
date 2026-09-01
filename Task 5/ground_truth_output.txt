@@ -1,0 +1,95 @@
+======================================================================
+GROUND TRUTH: 2025 Syracuse Women's Lacrosse
+======================================================================
+
+Total games played: 19
+Record: 10-9
+  Home: 5-4 (9 games)
+  Away: 4-4 (8 games)
+  Neutral: 1-1 (2 games)
+  Conference: 5-4 (9 games)
+
+Average margin of victory in wins: 5.50  (over 10 wins)
+Average margin of defeat in losses: 4.56  (over 9 losses)
+
+Highest combined score: 30 (2025-02-07 vs UAlbany, 21-9)
+Lowest combined score:  17 (2025-05-11 vs Yale, 8-9)
+
+Biggest margin of victory: 12 (2025-02-07 vs UAlbany, 21-9)
+Worst loss (largest margin): 15 (2025-04-17 vs Boston College, 2-17)
+
+Overtime games: 2
+  2025-03-07 vs Stanford: W 14-13
+  2025-03-10 vs Johns Hopkins: L 13-14
+
+----------------------------------------------------------------------
+PLAYER LEADERS
+----------------------------------------------------------------------
+
+Top 5 by Goals:
+  Emma Muchnick            34  (GP=19)
+  Caroline Trinkaus        32  (GP=19)
+  Emma Ward                30  (GP=19)
+  Alexa Vogelman           21  (GP=19)
+  Mileena Cotter           21  (GP=19)
+
+Top 5 by Assists:
+  Emma Ward                46  (GP=19)
+  Caroline Trinkaus        11  (GP=19)
+  Gracie Britton           10  (GP=19)
+  Carlie Desimone           9  (GP=15)
+  Emma Muchnick             7  (GP=19)
+
+Top 5 by Points:
+  Emma Ward                76  (GP=19)
+  Caroline Trinkaus        43  (GP=19)
+  Emma Muchnick            41  (GP=19)
+  Gracie Britton           30  (GP=19)
+  Alexa Vogelman           27  (GP=19)
+
+Top 5 by Shots:
+  Emma Ward                77  (GP=19)
+  Caroline Trinkaus        72  (GP=19)
+  Emma Muchnick            71  (GP=19)
+  Mileena Cotter           50  (GP=19)
+  Alexa Vogelman           46  (GP=19)
+
+Top 5 by Ground Balls:
+  Kaci Benoit              34  (GP=19)
+  Coco Vandiver            34  (GP=19)
+  Daniella Guyette         28  (GP=19)
+  Emma Muchnick            27  (GP=19)
+  Alexa Vogelman           25  (GP=19)
+
+Top 5 by Draw Controls:
+  Joely Caramelli          39  (GP=19)
+  Alexa Vogelman           31  (GP=19)
+  Mileena Cotter           24  (GP=19)
+  Emma Muchnick            13  (GP=19)
+  Molly Guzik              13  (GP=19)
+
+Top 5 by Caused Turnovers:
+  Coco Vandiver            40  (GP=19)
+  Alexa Vogelman           13  (GP=19)
+  Sam DeVito               13  (GP=19)
+  Superla Clark            13  (GP=16)
+  Kaci Benoit              12  (GP=19)
+
+Sum of individual player goals:   232
+Sum of individual player assists: 114
+Sum of individual player points:  346
+NOTE: The PDF's own 'Total' row reports 235 goals / 112 assists / 347 points for the team. Summing the individual player rows as transcribed gives a slightly different total (see DATA_QUALITY_NOTES.md) -- this is a real discrepancy in the source PDF/OCR, not a bug in this script, and is documented rather than silently corrected.
+
+Top 5 by shooting percentage (min. 10 shots):
+  Sam DeVito              66.7%  (8/12)
+  Olivia Adamson          55.6%  (10/18)
+  Gracie Britton          48.8%  (20/41)
+  Emma Muchnick           47.9%  (34/71)
+  Annie Parker            46.2%  (6/13)
+
+Top 5 by points-per-game (min. 10 games played):
+  Emma Ward               4.00 ppg  (76 pts / 19 gp)
+  Caroline Trinkaus       2.26 ppg  (43 pts / 19 gp)
+  Emma Muchnick           2.16 ppg  (41 pts / 19 gp)
+  Gracie Britton          1.58 ppg  (30 pts / 19 gp)
+  Alexa Vogelman          1.42 ppg  (27 pts / 19 gp)
